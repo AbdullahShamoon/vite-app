@@ -2,7 +2,7 @@
   <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">
     <img width="180" src="https://vite.dev/logo.svg" alt="Vite logo">
   </a>
-  <img src="https://raw.githubusercontent.com/react-icons/react-icons/master/react-icons.svg"  alt="React Icons">
+  <img src="https://raw.githubusercontent.com/react-icons/react-icons/master/react-icons.svg" width="160" alt="React Icons">
 
 </p>
 <br>
