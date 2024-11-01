@@ -1,12 +1,6 @@
-This is a simple React + Vite app showcasing the use of Components AND props
-
-It consist of a Navbar , Cards and a Footer
-
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<b><u>Components</u></b> and <b><u>Props</u></b> in React
 
-Currently, two official plugins are available:
+Made components of a Navbar , Cards and a Footer
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
