@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { useForm } from "react-hook-form"
+import { set, useForm } from "react-hook-form"
 
 
 function App() {
   const {
     register,
     handleSubmit,
-    watch,
+    setError,   // Used for custom error -- (here used for myform)
     formState: { errors , isSubmitting },
   } = useForm()
 
@@ -21,6 +21,12 @@ function App() {
   const onSubmit = async (data) => {
     await delay(2)  // simulating network delay
     console.log(data)
+    if(data.username !== "admin" ){
+      setError("myform", {message: "Invalid username"})
+    }
+    if(data.username === "shamoon" ){
+      setError("blocked", {message: "Blocked user"})
+    }
   }
 
 
@@ -35,7 +41,9 @@ function App() {
           <input {...register("password", { required: { value: true, message: "Password is required" }, minLength: { value: 8, message: "Password should be of more than 8 characters" }, maxLength: { value: 20, message: "Password should be of less than 20 characters" } })} type="password" placeholder='Password' /><br />
           {errors.password && <span>{errors.password.message}</span>}
           <br />
-          <input type="submit" disabled={isSubmitting} value="Login" />
+          <input type="submit" disabled={isSubmitting} value="Login" /> <br />
+          {errors.myform && <span>{errors.myform.message}</span>}     {/* Custom error */}<br />
+          {errors.blocked && <span>{errors.blocked.message}</span>}     {/* Custom error */}
         </form>
       </div>
     </>
